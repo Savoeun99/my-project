@@ -3,9 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Grid Layout</title>
+    <link rel="icon" href="https://e7.pngegg.com/pngimages/1010/961/png-clipart-white-and-red-next-and-previous-logo-computer-icons-source-code-html-coding-search-engine-optimization-text.png">
+
+<style>
+  
+    .container{
+        display:grid;
+        margin:10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:repeat(6,1fr);
+        grid-template-areas:"i-1 i-1 i-2"
+                            "i-3 i-3 i-3"
+                            "i-4 i-5 i-5"
+                            "i-6 i-6 i-7"
+                            "i-8 i-9 i-10"
+                            "i-11 i-11 i-11";
+    }
+    .box{
+        border:2px solid black;
+        border-radius:5px;
+        margin: 10px;
+        padding:20px;
+        background-color: aliceblue;
+        color:blue;
+         position: relative;
+
+    }
+    .box:hover{
+        transform:scale(0.97) ;
+        transition:all ease-out 0.2s;
+        border:solid 5px ghostwhite;
+    }
+    .i-1{
+        grid-area:i-1;
+        color:white;
+        background: #020024;
+        background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    }
+    .i-2{
+        grid-area:i-2;
+    }
+
+    .i-3{
+        background-color:rgb(63, 11, 184);
+        color:white;
+        grid-area:i-3;
+        
+    }
+    .i-4{
+        grid-area:i-4;
+       
+    }
+    .i-5{
+        grid-area:i-5;
+    }
+    .i-6{
+        grid-area:i-6;
+    }
+    .i-7{
+        grid-area:i-7;
+    }
+    .i-8{
+        grid-area:i-8 ;
+    }
+    .i-9{
+        grid-area:i-9; 
+    }
+    .i-10{
+        grid-area:i-10; 
+    }
+    .i-11{
+        grid-area:i-11; 
+    }
+    .new{
+        background-color: rgb(38, 174, 38);
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        transform: rotate(-20deg);
+        font-weight: bold; 
+      
+        
+    }
+    body{
+        background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    }
+    
+</style>
+
+
 </head>
 <body>
-   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, enim quibusdam beatae dolorem numquam fugiat a ea, alias, eaque voluptatem vitae facere expedita sit aspernatur accusantium qui ullam accusamus dolore?</p> 
+    
+<div class="container">
+    <div class="box i-1">
+        <h2>CSS Grid Layout</h2>
+        <p>This site is a collection of examples, video and other information to help you learn CSS Grid Layout. Developed and maintained by Rachel Andrew. </p>
+    </div>
+    <div class="box i-2">
+        <h2>The Video Tutorial</h2>
+        <p>A collection of short and to the point videos,demonstrating various parts of the CSS Grid Layoutspecification.</p>
+            
+    </div>
+    <div class="box i-3">
+        <h2>Get Started Guide</h2>
+        <p>A structured guide to resources that will help you to start learning CSS Grid Layout.</p>
+    </div>
+    <div class="box i-4">
+         <span class="new">New!</span>
+        <h2>The Examples</h2>
+        <p>Small examples of the CSS Grid Layout specification. Each demonstrates a
+        feature of the specification. Includes new Subgrid examples!</p>
+    </div>
+    <div class="box i-5">
+        <h2>Patterns</h2>
+        <p>Grab & Go. A set of example patterns with fallbacks for older browsers.</p>
+    </div>
+    <div class="box i-6">
+        <h2>Resources</h2>
+        <p>More links to articles, tutorials and conference presentations that will help you learn CSS Grid Layout.</p>
+    </div>
+    <div class="box i-7">
+        <h2>CSS Layout News</h2>
+        <p>Sign up for a weekly email full of CSS Layout links and resources.</p>
+    </div>
+    <div class="box i-8">
+        <h2>Questions?</h2>
+        <p>Ask me anything about Grid Layout over at my GitHub Grid AMA.</p>
+    </div>
+    <div class="box i-9">
+        <h2>About CSS Grid</h2>
+        <p>What even is this? Do I need to care?</p>
+    </div>
+    <div class="box i-10">
+        <h2>New!</h2>
+        <p>Infrequent updates on this site.</p>
+    </div>
+    <div class="box i-11">
+        <h2>GridBugs!</h2>
+        <p>If you have found a bug in a browser, or want to see what we have found so far, check out this site.</p>
+    </div>
+   
+</div>
+
+
+    
 </body>
 </html>
